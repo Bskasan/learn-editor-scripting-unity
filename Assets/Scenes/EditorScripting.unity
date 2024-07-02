@@ -460,6 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: Fire Skeleton
+  _typeOfMonster: 1
   _changeToDropItem: 50
   _rangeOfAwareness: 0
   _damage: 10

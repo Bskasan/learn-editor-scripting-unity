@@ -9,6 +9,10 @@ public class Monster : MonoBehaviour
     [SerializeField] 
     private string _name;
 
+    [SerializeField]
+    [Tooltip("Select the type of your monster.")]
+    private MonsterType _typeOfMonster = MonsterType.Vampire;
+
     [SerializeField] [Range(0, 100)] 
     private float _changeToDropItem;
 
@@ -22,10 +26,9 @@ public class Monster : MonoBehaviour
     [SerializeField] private int _speed;
 
     [Header("Dialogue")]
+    [Space]
     [SerializeField] [Tooltip("Speaks dialogue when entering combat")]
     [TextArea()]
     private string _battleCry;
-
-
 
 }
