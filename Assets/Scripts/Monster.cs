@@ -9,6 +9,9 @@ public class Monster : MonoBehaviour
     [SerializeField] 
     private string _name;
 
+    [CustomEditorAttributes.HorizontalLine(color: CustomEditorAttributes.EColor.White)]
+    [Space]
+
     [SerializeField]
     [Tooltip("Select the type of your monster.")]
     private MonsterType _typeOfMonster = MonsterType.Vampire;
@@ -17,7 +20,10 @@ public class Monster : MonoBehaviour
     private float _changeToDropItem;
 
     [SerializeField] [Tooltip("Radius size where monster will see the player.")]
-    private float _rangeOfAwareness; 
+    private float _rangeOfAwareness;
+
+    [CustomEditorAttributes.HorizontalLine(color: CustomEditorAttributes.EColor.White)]
+    [Space]
 
     [Header("Combat Stats")]
     [Space]
@@ -25,9 +31,13 @@ public class Monster : MonoBehaviour
     [SerializeField] private int _health;
     [SerializeField] private int _speed;
 
+    [CustomEditorAttributes.HorizontalLine(color: CustomEditorAttributes.EColor.White)]
+    [Space]
+
     [Header("Dialogue")]
     [Space]
-    [SerializeField] [Tooltip("Speaks dialogue when entering combat")]
+    [SerializeField] 
+    [Tooltip("Speaks dialogue when entering combat")]
     [TextArea()]
     private string _battleCry;
 
