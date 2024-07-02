@@ -402,6 +402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1624938442}
   - component: {fileID: 1624938443}
+  - component: {fileID: 1624938444}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -446,6 +447,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &1624938444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624938441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb2387154ecfd040948a231c6a95b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Fire Skeleton
+  _changeToDropItem: 50
+  _rangeOfAwareness: 0
+  _damage: 10
+  _health: 100
+  _speed: 12
+  _battleCry: This is a Battle cry...
 --- !u!1 &1878591754
 GameObject:
   m_ObjectHideFlags: 0
