@@ -8,5 +8,6 @@ public enum MonsterType
     Vampire,
     Humanoid,
     Boss,
-    Dragon
+    Dragon,
+    Skeleton
 }
