@@ -20,6 +20,6 @@ public class SeperatorDrawer : DecoratorDrawer
             + seperatorAttribute.Height 
             + seperatorAttribute.Spacing;
 
-
+        return totalSpacing;
     }
 }

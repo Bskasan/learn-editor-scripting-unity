@@ -6,7 +6,7 @@ public class Monster : MonoBehaviour
 {
     [SerializeField] private MonsterData _monsterData;
 
-    [Seperator()]
+    [Seperator(1, 30)]
     [SerializeField] private float _jumpForce;
 
     private void Awake() {
