@@ -6,6 +6,9 @@ public class Monster : MonoBehaviour
 {
     [SerializeField] private MonsterData _monsterData;
 
+    [Seperator()]
+    [SerializeField] private float _jumpForce;
+
     private void Awake() {
         Debug.Log("Name: " + _monsterData.Name);
         Debug.Log("Damage: " + _monsterData.Damage);
