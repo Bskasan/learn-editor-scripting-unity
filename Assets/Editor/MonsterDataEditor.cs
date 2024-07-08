@@ -10,7 +10,9 @@ public class MonsterDataEditor : Editor
 
         MonsterData data = (MonsterData)target;
 
-        EditorGUILayout.LabelField(data.Name.ToUpper(), EditorStyles.boldLabel);
+        string monsterTitleLabel = data.Name + " - " + data.TypeOfMonster;
+
+        EditorGUILayout.LabelField(monsterTitleLabel.ToUpper(), EditorStyles.boldLabel);
         EditorGUILayout.Space(10);
 
         // Difficulty Bar
@@ -22,10 +24,24 @@ public class MonsterDataEditor : Editor
 
         // Add after
 
+        // Help Box
+        if (data.Name == string.Empty) {
+            EditorGUILayout.HelpBox("Caution: No name specified. Please name the monster!", MessageType.Warning);
+        }
+
+        if (data.TypeOfMonster == MonsterType.None) {
+            EditorGUILayout.HelpBox("No Monster type selected!", MessageType.Warning);
+        }
+
+        if (data.Health <= 0) {
+            EditorGUILayout.HelpBox("Shouldn't have a negative value for health!", MessageType.Warning);
+        }
         
 
     }
 
+
+    // Progress Bar...
     private void ProgressBar(float value, string label) {
 
         Rect rect = GUILayoutUtility.GetRect(18, 30, "TextField");

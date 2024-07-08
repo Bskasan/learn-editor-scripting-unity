@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e23cef684cc7c043b892455377acecd, type: 3}
   m_Name: MonsterData_Dragon
   m_EditorClassIdentifier: 
-  _name: Dragon
+  _name: Crazy Dragon
   _typeOfMonster: 4
   _changeToDropItem: 100
   _rangeOfAwareness: 15
