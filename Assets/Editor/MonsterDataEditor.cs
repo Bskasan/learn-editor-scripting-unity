@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Codice.Utils;
 
 [CustomEditor(typeof(MonsterData))]
 public class MonsterDataEditor : Editor
@@ -17,7 +18,7 @@ public class MonsterDataEditor : Editor
 
         // Difficulty Bar
         float difficulty = data.Health + data.Damage + data.Speed;
-        ProgressBar(difficulty / 100, "Difficulty");
+        ProgressBar(difficulty / 100, SetDifficultyLevelOnInspector(difficulty));
 
         // Add before
         base.OnInspectorGUI();
@@ -36,8 +37,21 @@ public class MonsterDataEditor : Editor
         if (data.Health <= 0) {
             EditorGUILayout.HelpBox("Shouldn't have a negative value for health!", MessageType.Warning);
         }
-        
 
+        
+    }
+
+    public string SetDifficultyLevelOnInspector(float value) {
+
+        if (value <= 25) {
+            return "Beginner Level";
+        } else if (value > 25 && value <= 75) {
+            return "Medium Level";
+        } else {
+            return "Hard - Boss Character";
+        }
+
+        return null;
     }
 
 
