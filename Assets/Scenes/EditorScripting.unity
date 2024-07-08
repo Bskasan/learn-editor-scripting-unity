@@ -179,7 +179,7 @@ Transform:
   m_GameObject: {fileID: 346854258}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.75, y: 0, z: -7.22}
+  m_LocalPosition: {x: 9.75, y: 0, z: -11.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _monsterData: {fileID: 11400000, guid: 8c451cb4ac506a94ba996c8a60f5cf8d, type: 2}
+  _jumpForce: 0
 --- !u!65 &896823901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -673,6 +674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _monsterData: {fileID: 11400000, guid: 66f97c4dce26ec147a8b573eca062301, type: 2}
+  _jumpForce: 0
 --- !u!1 &1723156153
 GameObject:
   m_ObjectHideFlags: 0
