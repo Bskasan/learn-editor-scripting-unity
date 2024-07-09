@@ -23,6 +23,8 @@ public class MonsterData : ScriptableObject
     [SerializeField]
     [Tooltip("Radius size where monster will see the player.")]
     private float _rangeOfAwareness = 10;
+    [SerializeField]
+    private bool _canEnterCombat = true;
 
     [CustomEditorAttributes.HorizontalLine(color: CustomEditorAttributes.EColor.White)]
     [Space]
@@ -44,12 +46,18 @@ public class MonsterData : ScriptableObject
     private string _battleCry;
 
     // ---- GETTERS ----
-    public string Name => _name;
     public MonsterType TypeOfMonster => _typeOfMonster;
+    
+    public string Name => _name;
+    public string BattleCry => _battleCry;
+    
     public float ChangeToDropItem => _changeToDropItem;
     public float RangeOfAwareness => _rangeOfAwareness;
+    
+    public bool CanEnterCombat => _canEnterCombat;
+    
     public int Damage => _damage;
     public int Health => _health;
     public int Speed => _speed;
-    public string BattleCry => _battleCry;
+    
 }

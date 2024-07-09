@@ -21,7 +21,7 @@ public class MonsterDataEditor : Editor
         ProgressBar(difficulty / 100, SetDifficultyLevelOnInspector(difficulty));
 
         // Add before
-        base.OnInspectorGUI();
+        //base.OnInspectorGUI();
 
         // Add after
 
