@@ -75,14 +75,29 @@ public class MonsterDataEditor : Editor {
         // If Monster can enter the combat, show properties...
         EditorGUILayout.Space(10);
         if (_canEnterCombat.boolValue == true) {
+            EditorGUI.indentLevel++;
+
             EditorGUILayout.LabelField("Combat Stats", EditorStyles.boldLabel);
-            EditorGUILayout.PropertyField(_damage, new GUIContent("Damage"));
+
+            EditorGUILayout.BeginHorizontal();
+            EditorGUIUtility.labelWidth = 70;
             EditorGUILayout.PropertyField(_health, new GUIContent("Health"));
+            EditorGUILayout.PropertyField(_damage, new GUIContent("Damage"));
+            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.Space(10);
+
+            if (_health.intValue <= 0) {
+                EditorGUILayout.HelpBox("Shouldn't have a negative value for health!", MessageType.Warning);
+            }
+
             EditorGUILayout.PropertyField(_speed, new GUIContent("Speed"));
+
+            EditorGUI.indentLevel--;
         }
 
         EditorGUILayout.Space(10);
         EditorGUILayout.LabelField("Dialogue", EditorStyles.boldLabel);
+        EditorGUILayout.Space(20);
         EditorGUILayout.PropertyField(_battleCry, new GUIContent("Battle Cry"));
 
 
@@ -97,9 +112,7 @@ public class MonsterDataEditor : Editor {
         }
 
 
-        if (_health.intValue <= 0) {
-            EditorGUILayout.HelpBox("Shouldn't have a negative value for health!", MessageType.Warning);
-        }
+        
 
         // -----------------------------------
         // Apply these changes that we made...

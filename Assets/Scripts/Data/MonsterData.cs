@@ -26,18 +26,18 @@ public class MonsterData : ScriptableObject
     [SerializeField]
     private bool _canEnterCombat = true;
 
-    [CustomEditorAttributes.HorizontalLine(color: CustomEditorAttributes.EColor.White)]
-    [Space]
+    // [CustomEditorAttributes.HorizontalLine(color: CustomEditorAttributes.EColor.White)]
+    // [Space]
 
     //[Header("Combat Stats")]
     [SerializeField] private int _damage = 1;
     [SerializeField] private int _health = 1;
     [SerializeField] private int _speed = 1;
 
-    [CustomEditorAttributes.HorizontalLine(color: CustomEditorAttributes.EColor.White)]
-    [Space]
+    // [CustomEditorAttributes.HorizontalLine(color: CustomEditorAttributes.EColor.White)]
+    // [Space]
 
-    //[Header("Dialogue")]
+    // [Header("Dialogue")]
     [SerializeField]
     [Tooltip("Speaks dialogue when entering combat")]
     [TextArea()]
