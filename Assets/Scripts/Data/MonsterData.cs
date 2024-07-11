@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "MonsterData_", menuName = "UnitData/Monster")]
 public class MonsterData : ScriptableObject
 {
-    [Header("General Stats")]
+    // [Header("General Stats")]
     [Space]
     [SerializeField]
     private string _name = "...";
@@ -18,7 +18,7 @@ public class MonsterData : ScriptableObject
 
     [SerializeField]
     [Range(0, 100)]
-    private float _changeToDropItem = 20;
+    private float _chanceToDropItem = 20;
 
     [SerializeField]
     [Tooltip("Radius size where monster will see the player.")]
@@ -51,7 +51,7 @@ public class MonsterData : ScriptableObject
     public string Name => _name;
     public string BattleCry => _battleCry;
     
-    public float ChangeToDropItem => _changeToDropItem;
+    public float ChangeToDropItem => _chanceToDropItem;
     public float RangeOfAwareness => _rangeOfAwareness;
     
     public bool CanEnterCombat => _canEnterCombat;
