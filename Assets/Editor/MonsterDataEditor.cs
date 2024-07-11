@@ -90,7 +90,16 @@ public class MonsterDataEditor : Editor {
                 EditorGUILayout.HelpBox("Shouldn't have a negative value for health!", MessageType.Warning);
             }
 
+
+            EditorGUILayout.BeginHorizontal();
+            EditorGUIUtility.labelWidth = 70;
             EditorGUILayout.PropertyField(_speed, new GUIContent("Speed"));
+
+            if (GUILayout.Button("Random Stats")) {
+                RandomizeStats();
+            }
+
+            EditorGUILayout.EndHorizontal();
 
             EditorGUI.indentLevel--;
         }
@@ -140,5 +149,11 @@ public class MonsterDataEditor : Editor {
         Rect rect = GUILayoutUtility.GetRect(18, 30, "TextField");
         EditorGUI.ProgressBar(rect, value, label);
         EditorGUILayout.Space(10);
+    }
+
+    private void RandomizeStats() {
+        _damage.intValue = Random.Range(1, 50);
+        _health.intValue = Random.Range(1, 100);
+        _speed.intValue = Random.Range(1, 30);
     }
 }
