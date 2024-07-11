@@ -54,11 +54,11 @@ public class MonsterDataEditor : Editor {
 
         // Add before
 
-        base.OnInspectorGUI();
+        // base.OnInspectorGUI();
 
         // -----------------------------------
         // Redraw with our custom code... 
-        // Custom GUI
+        // Custom GUI --- Our Version 0.001
         EditorGUILayout.LabelField("General Stats", EditorStyles.boldLabel);
         EditorGUILayout.Space(10);
         EditorGUILayout.PropertyField(_name, new GUIContent("Name"));
@@ -72,12 +72,18 @@ public class MonsterDataEditor : Editor {
         EditorGUILayout.PropertyField(_rangeOfAwareness, new GUIContent("Awareness"));
         EditorGUILayout.PropertyField(_canEnterCombat, new GUIContent("Can Enter Combat?"));
 
-        EditorGUILayout.Space(20);
+        // If Monster can enter the combat, show properties...
+        EditorGUILayout.Space(10);
         if (_canEnterCombat.boolValue == true) {
+            EditorGUILayout.LabelField("Combat Stats", EditorStyles.boldLabel);
             EditorGUILayout.PropertyField(_damage, new GUIContent("Damage"));
             EditorGUILayout.PropertyField(_health, new GUIContent("Health"));
             EditorGUILayout.PropertyField(_speed, new GUIContent("Speed"));
         }
+
+        EditorGUILayout.Space(10);
+        EditorGUILayout.LabelField("Dialogue", EditorStyles.boldLabel);
+        EditorGUILayout.PropertyField(_battleCry, new GUIContent("Battle Cry"));
 
 
         // -----------------------------------
@@ -112,7 +118,6 @@ public class MonsterDataEditor : Editor {
             return "Hard - Boss Character";
         }
 
-        return null;
     }
 
 

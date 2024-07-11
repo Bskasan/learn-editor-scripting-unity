@@ -29,8 +29,7 @@ public class MonsterData : ScriptableObject
     [CustomEditorAttributes.HorizontalLine(color: CustomEditorAttributes.EColor.White)]
     [Space]
 
-    [Header("Combat Stats")]
-    [Space]
+    //[Header("Combat Stats")]
     [SerializeField] private int _damage = 1;
     [SerializeField] private int _health = 1;
     [SerializeField] private int _speed = 1;
@@ -38,8 +37,7 @@ public class MonsterData : ScriptableObject
     [CustomEditorAttributes.HorizontalLine(color: CustomEditorAttributes.EColor.White)]
     [Space]
 
-    [Header("Dialogue")]
-    [Space]
+    //[Header("Dialogue")]
     [SerializeField]
     [Tooltip("Speaks dialogue when entering combat")]
     [TextArea()]
