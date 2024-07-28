@@ -43,8 +43,12 @@ public class MonsterData : ScriptableObject
     [TextArea()]
     private string _battleCry;
 
+    // You have to be specific about what you're drawing on your editor.
+    [SerializeField] private MonsterAbility[] _abilities;
+
     // ---- GETTERS ----
     public MonsterType TypeOfMonster => _typeOfMonster;
+    public MonsterAbility[] Abilities => _abilities;
     
     public string Name => _name;
     public string BattleCry => _battleCry;

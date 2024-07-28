@@ -11,6 +11,7 @@ public class MonsterDataEditor : Editor {
 
     private SerializedProperty _name;
     private SerializedProperty _battleCry;
+    private SerializedProperty _abilities;
 
     private SerializedProperty _chanceToDropItem;
     private SerializedProperty _rangeOfAwareness;
@@ -32,6 +33,7 @@ public class MonsterDataEditor : Editor {
         _health = serializedObject.FindProperty("_health");
         _speed = serializedObject.FindProperty("_speed");
         _typeOfMonster = serializedObject.FindProperty("_typeOfMonster");
+        _abilities = serializedObject.FindProperty("_abilities");
     }
 
     public override void OnInspectorGUI() {
@@ -108,6 +110,7 @@ public class MonsterDataEditor : Editor {
         EditorGUILayout.LabelField("Dialogue", EditorStyles.boldLabel);
         EditorGUILayout.Space(20);
         EditorGUILayout.PropertyField(_battleCry, new GUIContent("Battle Cry"));
+        EditorGUILayout.PropertyField(_abilities, new GUIContent("Abilities"));
 
 
         // -----------------------------------

@@ -21,3 +21,7 @@ MonoBehaviour:
   _health: 13
   _speed: 23
   _battleCry: I am a dragon...
+  _abilities:
+  - _name: Big Fire
+    _damage: 25
+    _element: 2
