@@ -25,3 +25,6 @@ MonoBehaviour:
   - _name: Big Fire
     _damage: 25
     _element: 2
+  - _name: Big Fire
+    _damage: 25
+    _element: 2
